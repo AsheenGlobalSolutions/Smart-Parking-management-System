@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "af28b908-11ae-406e-9b90-7bbba2d1ca92",
+		"name": "smart parking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40211127"
+	},
+	"item": [
+		{
+			"name": "user service",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"name\": \"Charith Harsha\",\n  \"email\": \"charith@example.com\",\n  \"password\": \"SecurePass123\",\n  \"role\": \"USER\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/user-service/api/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"user-service",
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicle service",
+			"item": [
+				{
+					"name": "save vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"vehicleType\": \"Car new\",\n  \"vehicleBrand\": \"Toyota N\",\n  \"vehicleModel\": \"Corolla\",\n  \"vehicleColor\": \"Blue\",\n  \"vehicleYear\": 2030\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicle/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleId\":6,\n  \"vehicleType\": \"Car new\",\n  \"vehicleBrand\": \"Toyota N\",\n  \"vehicleModel\": \"Corolla\",\n  \"vehicleColor\": \"Blue\",\n  \"vehicleYear\": 2030\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicle/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleId\":6,\n  \"vehicleType\": \"Car new\",\n  \"vehicleBrand\": \"Toyota N\",\n  \"vehicleModel\": \"Corolla\",\n  \"vehicleColor\": \"Blue\",\n  \"vehicleYear\": 2030\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicle/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all vehicle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleId\":6,\n  \"vehicleType\": \"Car new\",\n  \"vehicleBrand\": \"Toyota N\",\n  \"vehicleModel\": \"Corolla\",\n  \"vehicleColor\": \"Blue\",\n  \"vehicleYear\": 2030\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vehicle/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "parking space",
+			"item": [
+				{
+					"name": "save parking space",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"location\": \"Colombo\",\n  \"address\": \"123 Galle Road, Colombo 03\",\n  \"available\": true,\n  \"type\": \"Car\",\n  \"ownerId\": 101\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parking-space/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parking-space",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update parking space",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n  \"location\": \"Colombo\",\n  \"address\": \"123 Galle Road, Colombo 03\",\n  \"available\": true,\n  \"type\": \"Car\",\n  \"ownerId\": 200\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parking-space/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parking-space",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Parking Space",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n  \"location\": \"Colombo\",\n  \"address\": \"123 Galle Road, Colombo 03\",\n  \"available\": true,\n  \"type\": \"Car\",\n  \"ownerId\": 200\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parking-space/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parking-space",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Parking Space",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n  \"location\": \"Colombo\",\n  \"address\": \"123 Galle Road, Colombo 03\",\n  \"available\": true,\n  \"type\": \"Car\",\n  \"ownerId\": 200\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/parking-space/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"parking-space",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment service",
+			"item": [
+				{
+					"name": "Save Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n  \"plateNumber\": \"ABC-1234\",\n  \"type\": \"Car\",\n  \"brand\": \"Toyota\",\n  \"userId\": 1001,\n  \"inside\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/payment/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"payment",
+								"save"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
