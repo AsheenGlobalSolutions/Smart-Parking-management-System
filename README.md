@@ -74,7 +74,7 @@ Use the Postman collection below to test all endpoints:
 
 This screenshot displays the successfully registered microservices in Eureka:
 
-![Eureka Dashboard](./docs/screenshots/eureka_dashboard.png)
+![Eureka Dashboard](docs/screenshots/eureka_dashboard.png)
 
 ---
 
@@ -100,6 +100,6 @@ Software Engineering Undergraduate
 
 - **Course:** ITS 1018 – Software Architectures & Design Patterns II  
 - **Assignment:** Final Examination – Microservice-based Parking System  
-- **Institute:** Graduate Diploma in Software Engineering
+- **Institute:** Institute of Software Engineering - IJSE
 
 ---
