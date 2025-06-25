@@ -43,7 +43,7 @@ public class ParkingSpaceController {
         };
     }
 
-    @PostMapping("update")
+    @PutMapping("update")
     public ResponseEntity<ResponseDTO> updateParkingSpace(@RequestBody ParkingSpaceDTO parkingSpaceDTO) {
         int res = parkingSpaceService.updateParkingSpace(parkingSpaceDTO);
         return switch (res) {
@@ -56,7 +56,7 @@ public class ParkingSpaceController {
         };
     }
 
-    @PostMapping("delete/{id}")
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<ResponseDTO> deleteParkingSpace(@PathVariable int id) {
         int res = parkingSpaceService.deleteParkingSpace(id);
         return switch (res) {

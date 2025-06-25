@@ -62,4 +62,10 @@ public class UserServiceImpl implements UserService {
         User user = userRepo.findByEmail(email);
         return modelMapper.map(user, UserDTO.class);
     }
+
+    @Override
+    public UserDTO login(String email, String password) {
+        userRepo.findByEmail(email);
+        return modelMapper.map(userRepo.findByEmail(email), UserDTO.class);
+    }
 }

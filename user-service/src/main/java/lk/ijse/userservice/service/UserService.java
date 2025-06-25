@@ -9,4 +9,5 @@ public interface UserService {
     UserDTO getUser(String email);
     boolean userExists(String email);
     UserDTO getUserByEmail(String email);
+    UserDTO login(String email, String password);
 }
