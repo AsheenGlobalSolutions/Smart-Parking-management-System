@@ -87,19 +87,3 @@ This screenshot displays the successfully registered microservices in Eureka:
 5. Use **Postman** to test endpoints via the gateway (`localhost:8080/`)
 
 ---
-
-## ✍️ Author
-
-**Charith Harsha**  
-Software Engineering Undergraduate  
-[Galle, Sri Lanka]
-
----
-
-## 📚 Coursework Info
-
-- **Course:** ITS 1018 – Software Architectures & Design Patterns II  
-- **Assignment:** Final Examination – Microservice-based Parking System  
-- **Institute:** Institute of Software Engineering - IJSE
-
----
